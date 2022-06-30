@@ -5,6 +5,43 @@ mainModule.controller('MainController', ['$decisionTree', function($decisionTree
   var vm = this;
   
   var RiskFactor = Object.freeze({ "HIGH": "HIGH", "MODERATE": "MODERATE", "LOW": "LOW"});
+
+  var FEDTREE = { risk: RiskFactor.MODERATE, 
+    description: 'We recommend <a target="_blank" href="https://github.com/Xtra-Computing/FedTree">FedTree</a> </br> <img src="image/fedtree-logo.png">',
+    explanation:'(Can do some explanation here)'
+  };
+  var PADDLEFL = { risk: RiskFactor.MODERATE, 
+    description: 'We recommend <a target="_blank" href="https://github.com/PaddlePaddle/PaddleFL">PaddleFL</a>',
+    explanation:'(Can do some explanation here)'
+  };
+  var TFF = { risk: RiskFactor.MODERATE, 
+    description: 'We recommend <a target="_blank" href="https://github.com/tensorflow/federated">TFF</a>',
+    explanation:'(Can do some explanation here)'
+  };
+  var FLUTE = { risk: RiskFactor.MODERATE, 
+    description: 'We recommend <a target="_blank" href="https://github.com/microsoft/msrflute">FLUTE</a>',
+    explanation:'(Can do some explanation here)'
+  };
+  var FLOWER = { risk: RiskFactor.MODERATE, 
+    description: 'We recommend <a target="_blank" href="https://github.com/adap/flower">Flower</a>',
+    explanation:'(Can do some explanation here)'
+  };
+  var FEDLEARNER = { risk: RiskFactor.MODERATE, 
+    description: 'We recommend <a target="_blank" href="https://github.com/bytedance/fedlearner">Fedlearner</a>',
+    explanation:'(Can do some explanation here)'
+  };
+  var FATE = { risk: RiskFactor.MODERATE, 
+    description: 'We recommend <a target="_blank" href="https://github.com/FederatedAI/FATE">FATE</a>',
+    explanation:'(Can do some explanation here)'
+  };
+  var FEDML = { risk: RiskFactor.MODERATE, 
+    description: 'We recommend <a target="_blank" href="https://github.com/FedML-AI/FedML">FedML</a>',
+    explanation:'(Can do some explanation here)'
+  };
+  var CRYPTEN = { risk: RiskFactor.MODERATE, 
+    description: 'We recommend <a target="_blank" href="https://github.com/facebookresearch/CrypTen">CrypTen</a>',
+    explanation:'(Can do some explanation here)'
+  };
     
   var riskAssessmentTree =
     {
@@ -20,11 +57,7 @@ mainModule.controller('MainController', ['$decisionTree', function($decisionTree
                 children: [
                   {
                     value: "Tree-based",
-                    // fedtree_position
-                    result: { risk: RiskFactor.MODERATE, 
-                      description: 'We recommend <a target="_blank" href="https://github.com/Xtra-Computing/FedTree">FedTree</a>',
-                      explanation:'(Can do some explanation here)'
-                    }
+                    result: FEDTREE
                   },
                   {
                     value: "NN-based",
@@ -36,11 +69,7 @@ mainModule.controller('MainController', ['$decisionTree', function($decisionTree
                             children: [
                               {
                                 value: "Yes",
-                                // paddlefl_position
-                                result: { risk: RiskFactor.MODERATE, 
-                                  description: 'We recommend <a target="_blank" href="https://github.com/PaddlePaddle/PaddleFL">PaddleFL</a>',
-                                  explanation:'(Can do some explanation here)'
-                                }
+                                result: PADDLEFL
                               },
                               {
                                 value: "No",
@@ -48,18 +77,11 @@ mainModule.controller('MainController', ['$decisionTree', function($decisionTree
                                   children: [
                                     {
                                       value: "Less training time",
-                                      result: { risk: RiskFactor.MODERATE, 
-                                        description: 'We recommend <a target="_blank" href="https://github.com/PaddlePaddle/PaddleFL">PaddleFL</a>',
-                                        explanation:'(Can do some explanation here)'
-                                      }
+                                      result: PADDLEFL
                                     },
                                     {
                                       value: "Low memory consumption",
-                                      // TFF_position
-                                      result: { risk: RiskFactor.MODERATE, 
-                                        description: 'We recommend <a target="_blank" href="https://github.com/tensorflow/federated">TFF</a>',
-                                        explanation:'(Can do some explanation here)'
-                                      }
+                                      result: TFF
                                     }
                                   ]
                               }
@@ -71,10 +93,7 @@ mainModule.controller('MainController', ['$decisionTree', function($decisionTree
                             children: [
                               {
                                 value: "Yes",
-                                result: { risk: RiskFactor.MODERATE, 
-                                  description: 'We recommend <a target="_blank" href="https://github.com/tensorflow/federated">TFF</a>',
-                                  explanation:'(Can do some explanation here)'
-                                }
+                                result: TFF
                               },
                               {
                                 value: "No",
@@ -82,10 +101,7 @@ mainModule.controller('MainController', ['$decisionTree', function($decisionTree
                                   children: [
                                     {
                                       value: "Yes",
-                                      result: { risk: RiskFactor.MODERATE, 
-                                        description: 'We recommend <a target="_blank" href="https://github.com/PaddlePaddle/PaddleFL">PaddleFL</a>',
-                                        explanation:'(Can do some explanation here)'
-                                      }
+                                      result: PADDLEFL
                                     },
                                     {
                                       value: "No",
@@ -93,19 +109,11 @@ mainModule.controller('MainController', ['$decisionTree', function($decisionTree
                                         children: [
                                           {
                                             value: "With client sampling",
-                                            // FLUTE_position
-                                            result: { risk: RiskFactor.MODERATE, 
-                                              description: 'We recommend <a target="_blank" href="https://github.com/microsoft/msrflute">FLUTE</a>',
-                                              explanation:'(Can do some explanation here)'
-                                            }
+                                            result: FLUTE
                                           },
                                           {
                                             value: "With all clients online",
-                                            // Flower_position
-                                            result: { risk: RiskFactor.MODERATE, 
-                                              description: 'We recommend <a target="_blank" href="https://github.com/adap/flower">Flower</a>',
-                                              explanation:'(Can do some explanation here)'
-                                            }
+                                            result: FLOWER
                                           }
                                         ]
                                     }
@@ -123,18 +131,11 @@ mainModule.controller('MainController', ['$decisionTree', function($decisionTree
                 children: [
                   {
                     value: "Both",
-                    // FATE_position
-                    result: { risk: RiskFactor.MODERATE, 
-                      description: 'We recommend <a target="_blank" href="https://github.com/FederatedAI/FATE">FATE</a>',
-                      explanation:'(Can do some explanation here)'
-                    }
+                    result: FATE
                   },
                   {
                     value: "Tree-based",
-                    result: { risk: RiskFactor.MODERATE, 
-                      description: 'We recommend <a target="_blank" href="https://github.com/Xtra-Computing/FedTree">FedTree</a>',
-                      explanation:'(Can do some explanation here)'
-                    }
+                    result: FEDTREE
                   },
                   {
                     value: "NN-based",
@@ -146,18 +147,11 @@ mainModule.controller('MainController', ['$decisionTree', function($decisionTree
                             children: [
                               {
                                 value: "TensorFlow",
-                                result: { risk: RiskFactor.MODERATE, 
-                                  description: 'We recommend <a target="_blank" href="https://github.com/tensorflow/federated">TFF</a>',
-                                  explanation:'(Can do some explanation here)'
-                                }
+                                result: TFF
                               },
                               {
                                 value: "PyTorch",
-                                // FedML_position
-                                result: { risk: RiskFactor.MODERATE, 
-                                  description: 'We recommend <a target="_blank" href="https://github.com/FedML-AI/FedML">FedML</a>',
-                                  explanation:'(Can do some explanation here)'
-                                }
+                                result: FEDML
                               }
                             ]
                         },
@@ -167,11 +161,7 @@ mainModule.controller('MainController', ['$decisionTree', function($decisionTree
                             children: [
                               {
                                 value: "Yes",
-                                //Fedlearner_position
-                                result: { risk: RiskFactor.MODERATE, 
-                                  description: 'We recommend <a target="_blank" href="https://github.com/bytedance/fedlearner">Fedlearner</a>',
-                                  explanation:'(Can do some explanation here)'
-                                }
+                                result: FEDLEARNER
                               },
                               {
                                 value: "No",
@@ -183,10 +173,7 @@ mainModule.controller('MainController', ['$decisionTree', function($decisionTree
                                         children: [
                                           {
                                             value: "Yes",
-                                            result: { risk: RiskFactor.MODERATE, 
-                                              description: 'We recommend <a target="_blank" href="https://github.com/PaddlePaddle/PaddleFL">PaddleFL</a>',
-                                              explanation:'(Can do some explanation here)'
-                                            }
+                                            result: PADDLEFL
                                           },
                                           {
                                             value: "No",
@@ -194,17 +181,11 @@ mainModule.controller('MainController', ['$decisionTree', function($decisionTree
                                               children: [
                                                 {
                                                   value: "Less training time",
-                                                  result: { risk: RiskFactor.MODERATE, 
-                                                    description: 'We recommend <a target="_blank" href="https://github.com/PaddlePaddle/PaddleFL">PaddleFL</a>',
-                                                    explanation:'(Can do some explanation here)'
-                                                  }
+                                                  result: PADDLEFL
                                                 },
                                                 {
                                                   value: "Low memory consumption",
-                                                  result: { risk: RiskFactor.MODERATE, 
-                                                    description: 'We recommend <a target="_blank" href="https://github.com/tensorflow/federated">TFF</a>',
-                                                    explanation:'(Can do some explanation here)'
-                                                  }
+                                                  result: TFF
                                                 }
                                               ]
                                           }
@@ -216,10 +197,7 @@ mainModule.controller('MainController', ['$decisionTree', function($decisionTree
                                         children: [
                                           {
                                             value: "Yes",
-                                            result: { risk: RiskFactor.MODERATE, 
-                                              description: 'We recommend <a target="_blank" href="https://github.com/tensorflow/federated">TFF</a>',
-                                              explanation:'(Can do some explanation here)'
-                                            }
+                                            result: TFF
                                           },
                                           {
                                             value: "No",
@@ -227,10 +205,7 @@ mainModule.controller('MainController', ['$decisionTree', function($decisionTree
                                               children: [
                                                 {
                                                   value: "Yes",
-                                                  result: { risk: RiskFactor.MODERATE, 
-                                                    description: 'We recommend <a target="_blank" href="https://github.com/PaddlePaddle/PaddleFL">PaddleFL</a>',
-                                                    explanation:'(Can do some explanation here)'
-                                                  }
+                                                  result: PADDLEFL
                                                 },
                                                 {
                                                   value: "No",
@@ -238,17 +213,11 @@ mainModule.controller('MainController', ['$decisionTree', function($decisionTree
                                                     children: [
                                                       {
                                                         value: "With client sampling",
-                                                        result: { risk: RiskFactor.MODERATE, 
-                                                          description: 'We recommend <a target="_blank" href="https://github.com/microsoft/msrflute">FLUTE</a>',
-                                                          explanation:'(Can do some explanation here)'
-                                                        }
+                                                        result: FLUTE
                                                       },
                                                       {
                                                         value: "With all clients online",
-                                                        result: { risk: RiskFactor.MODERATE, 
-                                                          description: 'We recommend <a target="_blank" href="https://github.com/adap/flower">Flower</a>',
-                                                          explanation:'(Can do some explanation here)'
-                                                        }
+                                                        result: FLOWER
                                                       }
                                                     ]
                                                 }
@@ -276,17 +245,11 @@ mainModule.controller('MainController', ['$decisionTree', function($decisionTree
                   children: [
                     {
                       value: "Tree-based",
-                      result: { risk: RiskFactor.MODERATE, 
-                        description: 'We recommend <a target="_blank" href="https://github.com/Xtra-Computing/FedTree">FedTree</a>',
-                        explanation:'(Can do some explanation here)'
-                      }
+                      result: FEDTREE
                     },
                     {
                       value: "NN-based",
-                      result: { risk: RiskFactor.MODERATE, 
-                        description: 'We recommend <a target="_blank" href="https://github.com/PaddlePaddle/PaddleFL">PaddleFL</a>',
-                        explanation:'(Can do some explanation here)'
-                      }
+                      result: PADDLEFL
                     }
                   ]
               },
@@ -304,26 +267,17 @@ mainModule.controller('MainController', ['$decisionTree', function($decisionTree
                               children: [
                                 {
                                   value: "Less communication",
-                                  result: { risk: RiskFactor.MODERATE, 
-                                    description: 'We recommend <a target="_blank" href="https://github.com/FederatedAI/FATE">FATE</a>',
-                                    explanation:'(Can do some explanation here)'
-                                  }
+                                  result: FATE
                                 },
                                 {
                                   value: "Low memory",
-                                  result: { risk: RiskFactor.MODERATE, 
-                                    description: 'We recommend <a target="_blank" href="https://github.com/bytedance/fedlearner">Fedlearner</a>',
-                                    explanation:'(Can do some explanation here)'
-                                  }
+                                  result: FEDLEARNER
                                 }
                               ]
                           },
                           {
                             value: "No",
-                            result: { risk: RiskFactor.MODERATE, 
-                              description: 'We recommend <a target="_blank" href="https://github.com/FederatedAI/FATE">FATE</a>',
-                              explanation:'(Can do some explanation here)'
-                            }
+                            result: FATE
                           }
                         ]
                     },
@@ -333,10 +287,7 @@ mainModule.controller('MainController', ['$decisionTree', function($decisionTree
                         children: [
                           {
                             value: "Yes",
-                            result: { risk: RiskFactor.MODERATE, 
-                              description: 'We recommend <a target="_blank" href="https://github.com/Xtra-Computing/FedTree">FedTree</a>',
-                              explanation:'(Can do some explanation here)'
-                            }
+                            result: FEDTREE
                           },
                           {
                             value: "No",
@@ -348,26 +299,17 @@ mainModule.controller('MainController', ['$decisionTree', function($decisionTree
                                     children: [
                                       {
                                         value: "Less communication",
-                                        result: { risk: RiskFactor.MODERATE, 
-                                          description: 'We recommend <a target="_blank" href="https://github.com/FederatedAI/FATE">FATE</a>',
-                                          explanation:'(Can do some explanation here)'
-                                        }
+                                        result: FATE
                                       },
                                       {
                                         value: "Low memory",
-                                        result: { risk: RiskFactor.MODERATE, 
-                                          description: 'We recommend <a target="_blank" href="https://github.com/bytedance/fedlearner">Fedlearner</a>',
-                                          explanation:'(Can do some explanation here)'
-                                        }
+                                        result: FEDLEARNER
                                       }
                                     ]
                                 },
                                 {
                                   value: "No",
-                                  result: { risk: RiskFactor.MODERATE, 
-                                    description: 'We recommend <a target="_blank" href="https://github.com/FederatedAI/FATE">FATE</a>',
-                                    explanation:'(Can do some explanation here)'
-                                  }
+                                  result: FATE
                                 }
                               ]
                           }
@@ -379,11 +321,7 @@ mainModule.controller('MainController', ['$decisionTree', function($decisionTree
                         children: [
                           {
                             value: "Yes",
-                            // CrypTen_position
-                            result: { risk: RiskFactor.MODERATE, 
-                              description: 'We recommend <a target="_blank" href="https://github.com/facebookresearch/CrypTen">CrypTen</a>',
-                              explanation:'(Can do some explanation here)'
-                            }
+                            result: CRYPTEN
                           },
                           {
                             value: "No",
@@ -395,17 +333,11 @@ mainModule.controller('MainController', ['$decisionTree', function($decisionTree
                                     children: [
                                       {
                                         value: "Yes",
-                                        result: { risk: RiskFactor.MODERATE, 
-                                          description: 'We recommend <a target="_blank" href="https://github.com/bytedance/fedlearner">Fedlearner</a>',
-                                          explanation:'(Can do some explanation here)'
-                                        }
+                                        result: FEDLEARNER
                                       },
                                       {
                                         value: "No",
-                                        result: { risk: RiskFactor.MODERATE, 
-                                          description: 'We recommend <a target="_blank" href="https://github.com/FederatedAI/FATE">FATE</a>',
-                                          explanation:'(Can do some explanation here)'
-                                        }
+                                        result: FATE
                                       }
                                     ]
                                 },
@@ -419,26 +351,17 @@ mainModule.controller('MainController', ['$decisionTree', function($decisionTree
                                           children: [
                                             {
                                               value: "Less communication",
-                                              result: { risk: RiskFactor.MODERATE, 
-                                                description: 'We recommend <a target="_blank" href="https://github.com/FederatedAI/FATE">FATE</a>',
-                                                explanation:'(Can do some explanation here)'
-                                              }
+                                              result: FATE
                                             },
                                             {
                                               value: "Low memory",
-                                              result: { risk: RiskFactor.MODERATE, 
-                                                description: 'We recommend <a target="_blank" href="https://github.com/bytedance/fedlearner">Fedlearner</a>',
-                                                explanation:'(Can do some explanation here)'
-                                              }
+                                              result: FEDLEARNER
                                             }
                                           ]
                                       },
                                       {
                                         value: "No",
-                                        result: { risk: RiskFactor.MODERATE, 
-                                          description: 'We recommend <a target="_blank" href="https://github.com/FederatedAI/FATE">FATE</a>',
-                                          explanation:'(Can do some explanation here)'
-                                        }
+                                        result: FATE
                                       }
                                     ]
                                 }
