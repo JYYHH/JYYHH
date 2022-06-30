@@ -7,39 +7,39 @@ mainModule.controller('MainController', ['$decisionTree', function($decisionTree
   var RiskFactor = Object.freeze({ "HIGH": "HIGH", "MODERATE": "MODERATE", "LOW": "LOW"});
 
   var FEDTREE = { risk: RiskFactor.MODERATE, 
-    description: 'We recommend <a target="_blank" href="https://github.com/Xtra-Computing/FedTree">FedTree</a> </br> <img src="image/fedtree-logo.png">',
+    description: 'We recommend <a target="_blank" href="https://github.com/Xtra-Computing/FedTree">FedTree</a> <br/> <img src="image/fedtree-logo.png">',
     explanation:'(Can do some explanation here)'
   };
   var PADDLEFL = { risk: RiskFactor.MODERATE, 
-    description: 'We recommend <a target="_blank" href="https://github.com/PaddlePaddle/PaddleFL">PaddleFL</a>',
+    description: 'We recommend <a target="_blank" href="https://github.com/PaddlePaddle/PaddleFL">PaddleFL</a> <br/> <img src="image/paddlefl-logo.png">',
     explanation:'(Can do some explanation here)'
   };
   var TFF = { risk: RiskFactor.MODERATE, 
-    description: 'We recommend <a target="_blank" href="https://github.com/tensorflow/federated">TFF</a>',
+    description: 'We recommend <a target="_blank" href="https://github.com/tensorflow/federated">TFF</a> <br/> <img src="image/tff-logo.png">',
     explanation:'(Can do some explanation here)'
   };
   var FLUTE = { risk: RiskFactor.MODERATE, 
-    description: 'We recommend <a target="_blank" href="https://github.com/microsoft/msrflute">FLUTE</a>',
+    description: 'We recommend <a target="_blank" href="https://github.com/microsoft/msrflute">FLUTE</a> <br/> <img src="image/FLUTE-logo.png">',
     explanation:'(Can do some explanation here)'
   };
   var FLOWER = { risk: RiskFactor.MODERATE, 
-    description: 'We recommend <a target="_blank" href="https://github.com/adap/flower">Flower</a>',
+    description: 'We recommend <a target="_blank" href="https://github.com/adap/flower">Flower</a> <br/> <img src="image/flower.webp">',
     explanation:'(Can do some explanation here)'
   };
   var FEDLEARNER = { risk: RiskFactor.MODERATE, 
-    description: 'We recommend <a target="_blank" href="https://github.com/bytedance/fedlearner">Fedlearner</a>',
+    description: 'We recommend <a target="_blank" href="https://github.com/bytedance/fedlearner">Fedlearner</a> <br/> <img src="image/fedlearner-logo.png">',
     explanation:'(Can do some explanation here)'
   };
   var FATE = { risk: RiskFactor.MODERATE, 
-    description: 'We recommend <a target="_blank" href="https://github.com/FederatedAI/FATE">FATE</a>',
+    description: 'We recommend <a target="_blank" href="https://github.com/FederatedAI/FATE">FATE</a> <br/> <img src="image/FATE_logo.png">',
     explanation:'(Can do some explanation here)'
   };
   var FEDML = { risk: RiskFactor.MODERATE, 
-    description: 'We recommend <a target="_blank" href="https://github.com/FedML-AI/FedML">FedML</a>',
+    description: 'We recommend <a target="_blank" href="https://github.com/FedML-AI/FedML">FedML</a> <br/> <img src="image/fedml_logo.png">',
     explanation:'(Can do some explanation here)'
   };
   var CRYPTEN = { risk: RiskFactor.MODERATE, 
-    description: 'We recommend <a target="_blank" href="https://github.com/facebookresearch/CrypTen">CrypTen</a>',
+    description: 'We recommend <a target="_blank" href="https://github.com/facebookresearch/CrypTen">CrypTen</a> <br/> <img src="image/CrypTen-logo.png">',
     explanation:'(Can do some explanation here)'
   };
     
