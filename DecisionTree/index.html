@@ -29,10 +29,10 @@
     <!--    <div ng-bind-html="mode.label | highlight: $select.search"></div>-->
     <!--  </ui-select-choices>-->
     <!--</ui-select>-->
-    
-    <p>This is a demo on deciding which framework to use</p>         
-    
-    <button class="btn btn-primary" ng-click="ctrl.openDecisionTreeWizard()">Find the most matching FL framework for your workload</button>
+   
+    <div class="text-center">
+      <button class="btn btn-primary" ng-click="ctrl.openDecisionTreeWizard()">Find the most matching FL framework for your workload</button>
+    </div>
  
     <decision-tree-result result="ctrl.result"></decision-tree-result>
 
