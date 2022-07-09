@@ -8,39 +8,39 @@ mainModule.controller('MainController', ['$decisionTree', function($decisionTree
 
   var FEDTREE = { risk: RiskFactor.MODERATE, 
     description: 'We recommend <a target="_blank" href="https://github.com/Xtra-Computing/FedTree">FedTree</a> <br/> <img src="image/fedtree-logo.png">',
-    explanation:'(Can do some explanation here)'
+    explanation:'FedTree is designed for the federated training of decision trees. It supports tree-based models for both horizontal FL and vertical FL. It can be deployed for single-host simulation and multi-host option for realistic FL simulation. As for privacy protection, FedTree takes advantage of aggregators for better computation efficiency but does not reveal any model parameter. It uses SecureBoost in vertical FL and HistSecAgg in horizontal FL. It also supports secure aggregation that prevents the aggregator from learning individual model gradients. Besides, differential privacy is supported by FedTree to protect user privacy and defend against potential privacy attacks.'
   };
   var PADDLEFL = { risk: RiskFactor.MODERATE, 
     description: 'We recommend <a target="_blank" href="https://github.com/PaddlePaddle/PaddleFL">PaddleFL</a> <br/> <img src="image/paddlefl-logo.png">',
-    explanation:'(Can do some explanation here)'
+    explanation:'PaddleFL covers most FL-related techniques in both horizontal and vertical FL settings. It supports both regression and neural networks for both horizontal FL and vertical FL. It can be deployed for single-host simulation and multi-host option for realistic FL simulation. As for privacy protection, PaddleFL does not require a 3rd party aggregator for vertical FL. It also supports secure aggregation that prevents the aggregator from learning individual model gradients in horizontal settings. Besides, differential privacy is supported by PaddleFL to protect user privacy and defend against potential privacy attacks. PaddleFL uses its own ML backend PaddlePaddle.'
   };
   var TFF = { risk: RiskFactor.MODERATE, 
     description: 'We recommend <a target="_blank" href="https://github.com/tensorflow/federated">TFF</a> <br/> <img src="image/tff-logo.png">',
-    explanation:'(Can do some explanation here)'
+    explanation:'TFF aims to provide easy-to-use APIs for users to adopt and develop horizontal FL algorithms. It supports both regression and neural networks for horizontal FL. It can be deployed only for single-host simulation without a multi-host option, which is still under development. As for privacy protection, TFF supports secure aggregation that prevents the aggregator from learning individual model gradients. Besides, differential privacy is supported by TFF to protect user privacy and defend against potential privacy attacks. However, TFF launches the clients with less or no parallelism among clients’ training.'
   };
   var FLUTE = { risk: RiskFactor.MODERATE, 
     description: 'We recommend <a target="_blank" href="https://github.com/microsoft/msrflute">FLUTE</a> <br/> <img src="image/FLUTE-logo.png">',
-    explanation:'(Can do some explanation here)'
+    explanation:'FLUTE aims to provide easy-to-use APIs for users to adopt and develop horizontal FL algorithms. It supports both regression and neural networks for horizontal FL. It can be deployed for single-host simulation and multi-host option for realistic FL simulation. As for privacy protection, differential privacy is supported by FLUTE to protect user privacy and defend against potential privacy attacks. As for computation efficiency, FLUTE has a much lower training time than other frameworks thanks to its parallelism.'
   };
   var FLOWER = { risk: RiskFactor.MODERATE, 
     description: 'We recommend <a target="_blank" href="https://github.com/adap/flower">Flower</a> <br/> <img src="image/flower.webp">',
-    explanation:'(Can do some explanation here)'
+    explanation:'Flower aims to provide easy-to-use APIs for users to adopt and develop horizontal FL algorithms. It supports both regression and neural networks for horizontal FL. It can be deployed for single-host simulation and multi-host option for realistic FL simulation. As for privacy protection, differential privacy is supported by Flower to protect user privacy and defend against potential privacy attacks. As for computation efficiency, Flower has a much lower training time than other frameworks thanks to its parallelism, but has a high memory requirement as it keeps the states of all clients at all times regardless of client sampling.'
   };
   var FEDLEARNER = { risk: RiskFactor.MODERATE, 
     description: 'We recommend <a target="_blank" href="https://github.com/bytedance/fedlearner">Fedlearner</a> <br/> <img src="image/fedlearner-logo.png">',
-    explanation:'(Can do some explanation here)'
+    explanation:'Fedlearner covers most FL-related techniques in both horizontal and vertical FL settings. It supports both regression and neural networks for horizontal FL, and provides neural networks and tree-based models for vertical FL. It can be deployed for single-host simulation and multi-host option for realistic FL simulation. As for privacy protection, Fedlearner uses split learning which does not require a 3rd party aggregator for vertical FL but directly transmits the intermediate gradients from the follower to the leader.'
   };
   var FATE = { risk: RiskFactor.MODERATE, 
     description: 'We recommend <a target="_blank" href="https://github.com/FederatedAI/FATE">FATE</a> <br/> <img src="image/FATE_logo.png">',
-    explanation:'(Can do some explanation here)'
+    explanation:'FATE covers most FL-related techniques in both horizontal and vertical FL settings. It supports regression, neural networks, and tree-based models for both horizontal FL and vertical FL. It can be deployed for single-host simulation and multi-host option for realistic FL simulation. As for privacy protection, FATE uses HE-based solutions which do not require a 3rd party aggregator for vertical FL. It also supports secure aggregation that prevents the aggregator from learning individual model gradients.'
   };
   var FEDML = { risk: RiskFactor.MODERATE, 
     description: 'We recommend <a target="_blank" href="https://github.com/FedML-AI/FedML">FedML</a> <br/> <img src="image/fedml_logo.png">',
-    explanation:'(Can do some explanation here)'
+    explanation:'FedML covers most FL-related techniques in both horizontal and vertical FL settings. It supports both regression and neural networks for both horizontal FL and vertical FL. It can be deployed for single-host simulation and multi-host option for realistic FL simulation. As for privacy protection, FedML supports secure aggregation that prevents the aggregator from learning individual model gradients.'
   };
   var CRYPTEN = { risk: RiskFactor.MODERATE, 
     description: 'We recommend <a target="_blank" href="https://github.com/facebookresearch/CrypTen">CrypTen</a> <br/> <img src="image/CrypTen-logo.png">',
-    explanation:'(Can do some explanation here)'
+    explanation:'CrypTen focuses on providing secure multi-party computation primitives. It supports both regression and neural networks for vertical FL. It can be deployed for single-host simulation and multi-host option for realistic FL simulation. As for privacy protection, CrypTen uses sMPC-based solutions which do not require a 3rd party aggregator for vertical FL. As for computation performance, CrypTen achieves better performance with sufficient training using 244 an efficient sMPC-based approach. Although the communication frequency of CrypTen is high, it is fast with low memory usage.'
   };
     
   var riskAssessmentTree =
