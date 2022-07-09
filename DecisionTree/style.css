@@ -10,3 +10,11 @@ button {
 .text-center {
   text-align: center;
 }
+.description_info {
+    background-color: #D9EEE1;
+    border-left: none;
+    padding: 32px;
+    margin: 24px;
+    margin-left: -32px;
+    margin-right: -32px;
+}
