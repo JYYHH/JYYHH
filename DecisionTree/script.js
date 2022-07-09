@@ -7,7 +7,7 @@ mainModule.controller('MainController', ['$decisionTree', function($decisionTree
   var RiskFactor = Object.freeze({ "HIGH": "HIGH", "MODERATE": "MODERATE", "LOW": "LOW"});
 
   var FEDTREE = { risk: RiskFactor.MODERATE, 
-    description: 'We recommend <a target="_blank" href="https://github.com/Xtra-Computing/FedTree">FedTree</a> <br/> <img src="image/fedtree-logo.png">',
+    description: 'We recommend <a target="_blank" href="https://github.com/Xtra-Computing/FedTree">FedTree</a> <br/> <img src="image/fedtree-logo.png" width = "600" height = "400" >',
     explanation:'FedTree is designed for the federated training of decision trees. It supports tree-based models for both horizontal FL and vertical FL. It can be deployed for single-host simulation and multi-host option for realistic FL simulation. As for privacy protection, FedTree takes advantage of aggregators for better computation efficiency but does not reveal any model parameter. It uses SecureBoost in vertical FL and HistSecAgg in horizontal FL. It also supports secure aggregation that prevents the aggregator from learning individual model gradients. Besides, differential privacy is supported by FedTree to protect user privacy and defend against potential privacy attacks.'
   };
   var PADDLEFL = { risk: RiskFactor.MODERATE, 
