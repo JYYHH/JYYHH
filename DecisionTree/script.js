@@ -27,19 +27,19 @@ mainModule.controller('MainController', ['$decisionTree', function($decisionTree
     explanation:'Flower aims to provide easy-to-use APIs for users to adopt and develop horizontal FL algorithms. It supports both regression and neural networks for horizontal FL. It can be deployed for single-host simulation and multi-host option for realistic FL simulation. As for privacy protection, differential privacy is supported by Flower to protect user privacy and defend against potential privacy attacks. As for computation efficiency, Flower has a much lower training time than other frameworks thanks to its parallelism, but has a high memory requirement as it keeps the states of all clients at all times regardless of client sampling.'
   };
   var FEDLEARNER = { risk: RiskFactor.MODERATE, 
-    description: 'We recommend <a target="_blank" href="https://github.com/bytedance/fedlearner">Fedlearner</a> <br/> <img src="image/fedlearner-logo.png"> height = "80" ',
+    description: 'We recommend <a target="_blank" href="https://github.com/bytedance/fedlearner">Fedlearner</a> <br/> <img src="image/fedlearner-logo.png" height = "80" >',
     explanation:'Fedlearner covers most FL-related techniques in both horizontal and vertical FL settings. It supports both regression and neural networks for horizontal FL, and provides neural networks and tree-based models for vertical FL. It can be deployed for single-host simulation and multi-host option for realistic FL simulation. As for privacy protection, Fedlearner uses split learning which does not require a 3rd party aggregator for vertical FL but directly transmits the intermediate gradients from the follower to the leader.'
   };
   var FATE = { risk: RiskFactor.MODERATE, 
-    description: 'We recommend <a target="_blank" href="https://github.com/FederatedAI/FATE">FATE</a> <br/> <img src="image/FATE_logo.png"> height = "80" ',
+    description: 'We recommend <a target="_blank" href="https://github.com/FederatedAI/FATE">FATE</a> <br/> <img src="image/FATE_logo.png" height = "80" >',
     explanation:'FATE covers most FL-related techniques in both horizontal and vertical FL settings. It supports regression, neural networks, and tree-based models for both horizontal FL and vertical FL. It can be deployed for single-host simulation and multi-host option for realistic FL simulation. As for privacy protection, FATE uses HE-based solutions which do not require a 3rd party aggregator for vertical FL. It also supports secure aggregation that prevents the aggregator from learning individual model gradients.'
   };
   var FEDML = { risk: RiskFactor.MODERATE, 
-    description: 'We recommend <a target="_blank" href="https://github.com/FedML-AI/FedML">FedML</a> <br/> <img src="image/fedml_logo.png"> height = "80" ',
+    description: 'We recommend <a target="_blank" href="https://github.com/FedML-AI/FedML">FedML</a> <br/> <img src="image/fedml_logo.png" height = "80"  >',
     explanation:'FedML covers most FL-related techniques in both horizontal and vertical FL settings. It supports both regression and neural networks for both horizontal FL and vertical FL. It can be deployed for single-host simulation and multi-host option for realistic FL simulation. As for privacy protection, FedML supports secure aggregation that prevents the aggregator from learning individual model gradients.'
   };
   var CRYPTEN = { risk: RiskFactor.MODERATE, 
-    description: 'We recommend <a target="_blank" href="https://github.com/facebookresearch/CrypTen">CrypTen</a> <br/> <img src="image/CrypTen-logo.png"> height = "80" ',
+    description: 'We recommend <a target="_blank" href="https://github.com/facebookresearch/CrypTen">CrypTen</a> <br/> <img src="image/CrypTen-logo.png" height = "80" >',
     explanation:'CrypTen focuses on providing secure multi-party computation primitives. It supports both regression and neural networks for vertical FL. It can be deployed for single-host simulation and multi-host option for realistic FL simulation. As for privacy protection, CrypTen uses sMPC-based solutions which do not require a 3rd party aggregator for vertical FL. As for computation performance, CrypTen achieves better performance with sufficient training using 244 an efficient sMPC-based approach. Although the communication frequency of CrypTen is high, it is fast with low memory usage.'
   };
     
